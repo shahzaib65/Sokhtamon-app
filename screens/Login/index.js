@@ -12,6 +12,7 @@ import { KeyboardAwareScrollView}  from 'react-native-keyboard-aware-scroll-view
 import * as Yup from 'yup';
 import {Formik} from 'formik';
 import { loginWithEmail } from './loginSlice';
+
 export default function Login() {
   const navigation = useNavigation();
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ export default function Login() {
         'Email не является допустимым'),
   });
   if(state.email.data){
-    navigation.navigate('Otp')
+    navigation.navigate('Otp');
   }
   function apiCall(values,{resetForm}){
     dispatch(loginWithEmail({ email: values.email, role: "user" }));
@@ -75,7 +76,6 @@ export default function Login() {
       onChangeText={handleChange('email')}
                       onBlur={() => setFieldTouched('email')}
      >
-
      </TextInput>
       </View>
       {touched.email && errors.email && (

@@ -31,7 +31,9 @@ const AppNavigation = () => {
       getId(); 
     },[userID])
   const getId = async()=>{
-    userID = await AsyncStorage.getItem("id")
+    userID = await AsyncStorage.getItem("user_id")
+    console.log("UserID=>",userID)
+
   }
   function Root() {
     return (
@@ -46,7 +48,7 @@ const AppNavigation = () => {
       headerTitle: (props)=>(
         <Image
               source={sokhtamon}
-              style={{width:120, height:60}}
+              style={{width:70, height:35}}
           />
       ),
       headerTitleAlign: "center",
@@ -71,7 +73,6 @@ const AppNavigation = () => {
       <NavigationContainer>
         <Stack.Navigator>
         <Stack.Screen  name="Root" component={Root} options={{ headerShown: false }} />
-          {/* <Stack.Screen options={{headerShown: false}} name="dashbaord" component={Dashboard} /> */}
           <Stack.Screen options={{headerShown: false}} name="profile" component={Profile} />
           <Stack.Screen options={{headerShown: false}} name="tou" component={TOU} />
           <Stack.Screen options={{headerShown: false}} name="policy" component={Privacy} />
@@ -86,9 +87,12 @@ const AppNavigation = () => {
           <Stack.Screen options={{headerShown: false}} name="home" component={Home} />
           <Stack.Screen options={{headerShown: false}} name="serviceJob" component={ServiceJob} />
           <Stack.Screen options={{headerShown: false}} name="editProfile" component={EditProfile} />
+          <Stack.Screen options={{headerShown: false}} name="Login" component={Login} />
+          <Stack.Screen options={{headerShown: false}} name="Otp" component={Otp} />
         </Stack.Navigator>
       </NavigationContainer>
       )
+   
   }else{
     return(
       <NavigationContainer>
@@ -96,9 +100,25 @@ const AppNavigation = () => {
       <Stack.Screen options={{headerShown: false}} name="Login" component={Login} />
       <Stack.Screen options={{headerShown: false}} name="Otp" component={Otp} />
       <Stack.Screen  name="Root" component={Root} options={{ headerShown: false }} />
+      <Stack.Screen options={{headerShown: false}} name="home" component={Home} />
+      <Stack.Screen options={{headerShown: false}} name="profile" component={Profile} />
+          <Stack.Screen options={{headerShown: false}} name="tou" component={TOU} />
+          <Stack.Screen options={{headerShown: false}} name="policy" component={Privacy} />
+          <Stack.Screen options={{headerShown: false}} name="tos" component={TOS} />
+          <Stack.Screen options={{headerShown: false}} name="about" component={Aboutus} />
+          <Stack.Screen options={{headerShown: false}} name="contact" component={ContactUs} />
+          <Stack.Screen options={{headerShown: false}} name="jobDetail" component={JobDetails} />
+          <Stack.Screen options={{headerShown: false}} name="serviceDetail" component={ServiceDetails} />
+          <Stack.Screen options={{headerShown: false}} name="Service" component={Service} />
+          <Stack.Screen options={{headerShown: false}} name="Ad" component={PlaceAd} />
+          <Stack.Screen options={{headerShown: false}} name="Subscription" component={Subscription} />
+          
+          <Stack.Screen options={{headerShown: false}} name="serviceJob" component={ServiceJob} />
+          <Stack.Screen options={{headerShown: false}} name="editProfile" component={EditProfile} />
       </Stack.Navigator>
   </NavigationContainer>
      )
+   
   }
 
   

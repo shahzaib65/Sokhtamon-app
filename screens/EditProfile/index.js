@@ -21,12 +21,13 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-
+import {useNavigation} from '@react-navigation/native';
 import RNPickerSelect from 'react-native-picker-select';
 
 const EditProfile = () => {
   const dispatch = useDispatch();
   const state = useSelector(state => state);
+  const navigation = useNavigation();
 
   const [selectGender, setSelectGender] = useState(null);
   const [gender, setGender] = useState([
@@ -113,6 +114,8 @@ const getId = async()=>{
       },
     ]);
   };
+
+ 
 
   return (
     <ScrollView
@@ -226,6 +229,8 @@ const getId = async()=>{
                 </Text>
               )}
             </TouchableOpacity>
+
+        
           </>
         )}
       </Formik>

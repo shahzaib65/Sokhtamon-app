@@ -10,7 +10,6 @@ export const otpWithEmail = createAsyncThunk("otpEmail", async (otp) => {
     }
   );
   const data = await response.json();
- console.log(data)
  await AsyncStorage.setItem("user_id",data._id)
   return data;
 });

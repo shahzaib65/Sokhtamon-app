@@ -28,7 +28,7 @@ const Otp = () => {
     resetForm();
   }
   if (state.otp.data){
-    navigation.navigate('dashbaord')
+    navigation.navigate('Root')
   }
 
   return (
@@ -87,7 +87,7 @@ const Otp = () => {
           ): ( <Text className=" text-center text-white" style={{fontFamily: 'Roboto-Bold',fontSize: 16}}>Проверить код</Text>)
          }
         </TouchableOpacity>
-        <Text style={styles.error_text}>{state.data.otp}</Text>
+        {/* <Text style={styles.error_text}>{state.data.otp}</Text> */}
         
         </>
       )

@@ -8,11 +8,23 @@ import {
   import { colors } from '../../theme';
 
   import {useNavigation} from '@react-navigation/native';
-
+ import AsyncStorage from '@react-native-async-storage/async-storage';
+import { ScrollView } from 'react-native-gesture-handler';
 const Profile = () => {
   const navigation = useNavigation();
+
+  const logoutUser = async () => {
+    try {
+      await AsyncStorage.removeItem("user_id"); 
+      navigation.navigate("Login")
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
+
+
   return (
-    <View className="flex bg-white w-full h-full">
+    <ScrollView className="flex bg-white w-full h-full">
      <View className="flex flex-col">
    
     <View className="flex flex-row mt-4 mx-2">
@@ -69,10 +81,24 @@ const Profile = () => {
    <Text className="text-black" style={{fontFamily: 'Roboto-Medium',fontSize:16}}>Условия использования</Text>
  <SvgUri width="22" height="22" source={require("../../assets/right_arrow.svg")}/>
    </TouchableOpacity>
+
+   <TouchableOpacity onPress={logoutUser}
+              
+              className=" my-8 rounded-md flex 
+        justify-center"
+              style={styles.continue_view}>
+              
+                <Text
+                  className=" text-center text-white"
+                  style={{fontFamily: 'Roboto-Bold', fontSize: 16}}>
+                  Выйти
+                </Text>
+              
+            </TouchableOpacity>
    
 
      </View>
-    </View>
+    </ScrollView>
   )
 }
 
