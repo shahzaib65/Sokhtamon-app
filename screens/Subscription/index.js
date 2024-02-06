@@ -41,23 +41,7 @@ export default function Subscription() {
                                     <Text className="mx-4 text-black">Приоритетная поддержка</Text>
                                 </View>
 
-                                <View className="flex items-center flex-row">
-                                <Image className="w-8 h-8" source={cross}/>
-
-                                    <Text className="mx-4 text-black">Ранний доступ к функциям</Text>
-                                </View>
-
-                                <View className="flex items-center flex-row">
-                                <Image className="w-8 h-8" source={cross}/>
-
-                                    <Text className="mx-4 text-black">Круглосуточная VIP-поддержка</Text>
-                                </View>
-
-                                <View  className="flex items-center flex-row">
-                                <Image className="w-8 h-8" source={cross}/>
-
-                                    <Text className="mx-4 text-black">Ранний доступ к бета-функциям</Text>
-                                </View>
+                               
                             </View>
                         </View>         
            </View>

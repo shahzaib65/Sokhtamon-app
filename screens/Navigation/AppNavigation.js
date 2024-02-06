@@ -100,8 +100,8 @@ const AppNavigation = () => {
       <Stack.Screen options={{headerShown: false}} name="Login" component={Login} />
       <Stack.Screen options={{headerShown: false}} name="Otp" component={Otp} />
       <Stack.Screen  name="Root" component={Root} options={{ headerShown: false }} />
-      <Stack.Screen options={{headerShown: false}} name="home" component={Home} />
-      <Stack.Screen options={{headerShown: false}} name="profile" component={Profile} />
+        <Stack.Screen options={{headerShown: false}} name="home" component={Home} />
+        <Stack.Screen options={{headerShown: false}} name="profile" component={Profile} />
           <Stack.Screen options={{headerShown: false}} name="tou" component={TOU} />
           <Stack.Screen options={{headerShown: false}} name="policy" component={Privacy} />
           <Stack.Screen options={{headerShown: false}} name="tos" component={TOS} />
