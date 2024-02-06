@@ -25,22 +25,14 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Image, StyleSheet,View,Button, Text } from 'react-native';
 const Drawer = createDrawerNavigator();
 import sokhtamon from "../../assets/sokhtamon.png"
-
-
-
-
 const AppNavigation = () => {
-
     let userID= ''
     useEffect(()=>{
       getId(); 
     },[userID])
   const getId = async()=>{
     userID = await AsyncStorage.getItem("id")
-   
   }
-
-
   function Root() {
     return (
       <Drawer.Navigator 
@@ -73,7 +65,7 @@ const AppNavigation = () => {
       </Drawer.Navigator>
     );
   }
-  
+
   if(userID !== null){
     return(
       <NavigationContainer>
