@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const contactUs = createAsyncThunk("contact", async (userData) => {
   const response = await fetch(
-    "https://sokhtamon-backend-production.up.railway.app/api/contactus/upload",
+    "https://sokhtamon-backend-production-874c.up.railway.app/api/contactus/upload",
     {
       method: "POST",
       body: JSON.stringify(userData),

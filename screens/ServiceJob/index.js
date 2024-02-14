@@ -25,6 +25,41 @@ const ServiceJob = () => {
 
 
     const service = [
+      {
+        "label": "Pемонт квартир",
+        "value": "Pемонт квартир"
+      },
+      {
+    "label": "Сборка и ремонт мебели",
+    "value": "Сборка и ремонт мебели"
+      },
+      {
+        "label": "Архитектор",
+        "value": "Архитектор"
+      },
+      {
+        "label": "жестянщик",
+        "value": "жестянщик"
+      },
+      {
+        "label": "Полировки",
+        "value": "Полировки"
+      },
+      {
+        "label": "Кандакори",
+        "value": "Кандакори"
+      },
+      {
+        "label": "Лазерная резка металла",
+        "value": "Лазерная резка металла"
+      },
+      {
+        "label": "Сварочные работы.",
+        "value": "Сварочные работы."
+      },{
+        "label": "Дизайнер",
+        "value": "Дизайнер"
+      },
         {
           label: 'Плотник',
           value: 'Плотник',
@@ -324,7 +359,7 @@ const config = {
 headers: { 'content-type': 'multipart/form-data' }
 }
 
-axios.post("https://sokhtamon-backend-production.up.railway.app/api/job/upload",form, config)
+axios.post("https://sokhtamon-backend-production-874c.up.railway.app/api/job/upload",form, config)
 .then(response => {
 setLoading(false)
 showAlert("Поздравления","Ваше информационное объявление опубликовано")

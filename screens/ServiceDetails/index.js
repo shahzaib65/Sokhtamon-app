@@ -12,7 +12,7 @@ const ServiceDetails = ({navigation}) => {
   const [ detail,setDetail] = useState('')
   useEffect(()=>{
     
-    axios.get(`https://sokhtamon-backend-production.up.railway.app/api/job/fetch/${id}`)
+    axios.get(`https://sokhtamon-backend-production-874c.up.railway.app/api/job/fetch/${id}`)
     .then((res)=>{
         console.log(res.data)
        setDetail(res.data)

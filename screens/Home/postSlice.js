@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit"
 export const post = createAsyncThunk("posts", async () => {
     const response = await fetch(
-      "https://sokhtamon-backend-production.up.railway.app/api/post/all",
+      "https://sokhtamon-backend-production-874c.up.railway.app/api/post/all",
       {
         method: "GET",
         headers: { "content-type": "application/json" },
@@ -13,7 +13,7 @@ export const post = createAsyncThunk("posts", async () => {
 
   export const categoryWise = createAsyncThunk("category", async (category) => {
     const response = await fetch(
-      "https://sokhtamon-backend-production.up.railway.app/api/post/fetch?category_name="+category,
+      "https://sokhtamon-backend-production-874c.up.railway.app/api/post/fetch?category_name="+category,
       {
         method: "GET",
         headers: { "content-type": "application/json" },

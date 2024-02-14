@@ -27,6 +27,41 @@ const Services = ({navigation}) => {
   const state = useSelector((state) => state);
   const service = [
     {
+      "label": "Pемонт квартир",
+      "value": "Pемонт квартир"
+    },
+    {
+  "label": "Сборка и ремонт мебели",
+  "value": "Сборка и ремонт мебели"
+    },
+    {
+      "label": "Архитектор",
+      "value": "Архитектор"
+    },
+    {
+      "label": "жестянщик",
+      "value": "жестянщик"
+    },
+    {
+      "label": "Полировки",
+      "value": "Полировки"
+    },
+    {
+      "label": "Кандакори",
+      "value": "Кандакори"
+    },
+    {
+      "label": "Лазерная резка металла",
+      "value": "Лазерная резка металла"
+    },
+    {
+      "label": "Сварочные работы.",
+      "value": "Сварочные работы."
+    },{
+      "label": "Дизайнер",
+      "value": "Дизайнер"
+    },
+    {
       label: 'Плотник',
       value: 'Плотник',
     },
@@ -211,7 +246,7 @@ const Services = ({navigation}) => {
                 onPress={() => navigation.navigate('serviceJob')}
                 style={{backgroundColor: colors.primary,padding:4,borderRadius:4, marginVertical: 10,marginHorizontal: 40}}>
                 <Text style={{color: 'white',textAlign: 'center',paddingVertical: 4}}>
-                Загрузить сервис
+                Подать заявку на работу
                 </Text>
               </TouchableOpacity>
 

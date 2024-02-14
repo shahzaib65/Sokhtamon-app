@@ -27,16 +27,16 @@ const Profile = () => {
     <ScrollView className="flex bg-white w-full h-full">
      <View className="flex flex-col">
    
-    <View className="flex flex-row mt-4 mx-2">
+    {/* <View className="flex flex-row mt-4 mx-2">
     <Image className=" rounded-full border-1 border-black" source={require("../../assets/profile1.png")}/>
     <View className="flex flex-col mt-1">
      <Text className=" text-black" style={{fontFamily: 'Roboto-Medium',fontSize: 18}}>shahzaibmehmood65@gmail.com</Text>
      <Text className="text-black" style={{fontFamily: 'Roboto-Regular',fontSize: 14}}>Male</Text>
     </View>
 
-    </View>
+    </View> */}
 
-    <TouchableOpacity onPress={()=> navigation.navigate("editProfile")}
+    {/* <TouchableOpacity onPress={()=> navigation.navigate("editProfile")}
         className=" my-8 rounded-md flex justify-center"
         style={styles.continue_view}>
         <Text
@@ -44,7 +44,7 @@ const Profile = () => {
           style={{fontFamily: 'Roboto-Bold', fontSize: 16}}>
           Редактировать профиль
         </Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
 
    <View className="bg-[#F7F7F7] h-px w-full"></View>
    

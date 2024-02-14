@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const cities = createAsyncThunk("cities", async() => {
 
   const response = await fetch(
-      "https://sokhtamon-backend-production.up.railway.app/api/city/fetch",
+      "https://sokhtamon-backend-production-874c.up.railway.app/api/city/fetch",
     {
       method: "GET",
       headers: { "content-type": "application/json" },

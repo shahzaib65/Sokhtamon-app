@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 export const otpWithEmail = createAsyncThunk("otpEmail", async (otp) => {
   const response = await fetch(
-    "https://sokhtamon-backend-production.up.railway.app/api/user/verifyOtp",
+    "https://sokhtamon-backend-production-874c.up.railway.app/api/user/verifyOtp",
     {
       method: "POST",
       body: JSON.stringify(otp),

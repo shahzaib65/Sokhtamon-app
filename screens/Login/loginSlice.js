@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit"
 export const loginWithEmail = createAsyncThunk("email", async (userData) => {
     const response = await fetch(
-      "https://sokhtamon-backend-production.up.railway.app/api/user/login",
+      "https://sokhtamon-backend-production-874c.up.railway.app/api/user/login",
       {
         method: "POST",
         body: JSON.stringify(userData),

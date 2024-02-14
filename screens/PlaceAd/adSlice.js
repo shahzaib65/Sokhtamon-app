@@ -43,7 +43,7 @@ export const postAd = createAsyncThunk("Ad", async(obj) => {
 headers: { 'content-type': 'multipart/form-data' }
 }
 
-axios.post("https://sokhtamon-backend-production.up.railway.app/api/post/upload",form, config)
+axios.post("https://sokhtamon-backend-production-874c.up.railway.app/api/post/upload",form, config)
 .then(response => {
 console.log(response)
 
